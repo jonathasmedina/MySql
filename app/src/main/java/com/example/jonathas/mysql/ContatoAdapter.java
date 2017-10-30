@@ -55,9 +55,9 @@ public class ContatoAdapter extends ArrayAdapter {
             row = layoutInflater.inflate(R.layout.row_layout, parent,false);
 
             contatoHolder = new ContatoHolder();
-            contatoHolder.tx_name = row.findViewById(R.id.name);
-            contatoHolder.tx_user_name = row.findViewById(R.id.user_name);
-            contatoHolder.tx_user_pass = row.findViewById(R.id.user_pass);
+            contatoHolder.tx_name = row.findViewById(R.id.text_name);
+            contatoHolder.tx_user_name = row.findViewById(R.id.text_user_name);
+            contatoHolder.tx_user_pass = row.findViewById(R.id.text_user_pass);
 
             row.setTag(contatoHolder);
         }
@@ -66,7 +66,7 @@ public class ContatoAdapter extends ArrayAdapter {
         }
 
         Contatos contatos = (Contatos) this.getItem(position);
-        contatoHolder.tx_name.setText(contatos.getName());
+        contatoHolder.tx_name.setText("texto");
         contatoHolder.tx_user_name.setText(contatos.getUser_name());
         contatoHolder.tx_user_pass.setText(contatos.getUser_pass());
 

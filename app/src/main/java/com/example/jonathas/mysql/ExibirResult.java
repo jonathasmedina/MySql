@@ -34,6 +34,7 @@ public class ExibirResult extends AppCompatActivity {
         try {
             jsonObject = new JSONObject(JSON_STRING);
             jsonArray = jsonObject.getJSONArray("server_response");
+
             int count = 0;
             String name, user_name, user_pass;
 
