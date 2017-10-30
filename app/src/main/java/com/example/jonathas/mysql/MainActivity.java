@@ -12,7 +12,6 @@ public class MainActivity extends Activity{
     EditText ET_NAME,ET_PASS;
     String login_name,login_pass;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +19,13 @@ public class MainActivity extends Activity{
         ET_NAME = (EditText)findViewById(R.id.user_name);
         ET_PASS = (EditText)findViewById(R.id.user_pass);
     }
+
+    public void getJSON(View view) {
+        String method = "getJSON";
+        BackgroundTask backgroundTask = new BackgroundTask(this);
+        backgroundTask.execute(method, null, "");
+    }
+
 
     public void userReg(View view)
     {
