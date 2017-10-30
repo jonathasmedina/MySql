@@ -1,6 +1,7 @@
 package com.example.jonathas.mysql;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.renderscript.ScriptGroup;
 import android.support.v7.app.AlertDialog;
@@ -125,7 +126,8 @@ public class BackgroundTask extends AsyncTask<String,Void,String> {
                 URL url = new URL(get_json_data);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 InputStream inputStream = httpURLConnection.getInputStream();
-                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+                BufferedReader bufferedReader = new BufferedReader(
+                        new InputStreamReader(inputStream));
 
                 StringBuilder stringBuilder = new StringBuilder();
                 while ((JSON_STRING = bufferedReader.readLine()) != null ) {
@@ -144,6 +146,18 @@ public class BackgroundTask extends AsyncTask<String,Void,String> {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+        }
+        else if(method.equals("parseJSON")) {
+            if (JSON_STRING==null)
+                Toast.makeText(ctx, "Primeiro recupere o JSON", Toast.LENGTH_SHORT).show();
+            else
+            {
+                Intent intent = new Intent(ctx, ExibirResult.class);
+                intent.putExtra("JSON_STRING",JSON_STRING);
+                ctx.startActivity(intent);
+
+            }
+
         }
 
         return null;

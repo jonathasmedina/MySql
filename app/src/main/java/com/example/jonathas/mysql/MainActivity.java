@@ -20,6 +20,13 @@ public class MainActivity extends Activity{
         ET_PASS = (EditText)findViewById(R.id.user_pass);
     }
 
+    public void parseJSON(View view) {
+        String method = "parseJSON";
+        BackgroundTask backgroundTask = new BackgroundTask(this);
+        backgroundTask.execute(method, null, "");
+    }
+
+
     public void getJSON(View view) {
         String method = "getJSON";
         BackgroundTask backgroundTask = new BackgroundTask(this);

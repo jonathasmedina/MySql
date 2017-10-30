@@ -45,7 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:onClick="userReg"
         android:text="Register Now" />
 
@@ -53,8 +53,18 @@
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:onClick="getJSON"
         android:layout_gravity="center_horizontal"
         android:text="Recuperar JSON" />
+
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="parseJSON"
+        android:layout_gravity="center_horizontal"
+        android:text="Parse JSON" />
 </LinearLayout>
