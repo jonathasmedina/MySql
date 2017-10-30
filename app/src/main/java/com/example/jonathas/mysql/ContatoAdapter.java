@@ -49,9 +49,9 @@ public class ContatoAdapter extends ArrayAdapter {
         row = convertView;
         ContatoHolder contatoHolder;
 
-
         if(row == null){
-            LayoutInflater layoutInflater = (LayoutInflater) this.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            LayoutInflater layoutInflater = (LayoutInflater)
+                    this.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             row = layoutInflater.inflate(R.layout.row_layout, parent,false);
 
             contatoHolder = new ContatoHolder();
@@ -64,9 +64,8 @@ public class ContatoAdapter extends ArrayAdapter {
         else{
             contatoHolder = (ContatoHolder) row.getTag();
         }
-
         Contatos contatos = (Contatos) this.getItem(position);
-        contatoHolder.tx_name.setText("texto");
+        contatoHolder.tx_name.setText(contatos.getName());
         contatoHolder.tx_user_name.setText(contatos.getUser_name());
         contatoHolder.tx_user_pass.setText(contatos.getUser_pass());
 
