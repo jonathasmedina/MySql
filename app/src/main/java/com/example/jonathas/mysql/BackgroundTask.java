@@ -134,6 +134,9 @@ public class BackgroundTask extends AsyncTask<String,Void,String> {
                 while ((JSON_STRING = bufferedReader.readLine()) != null ) {
                     stringBuilder.append(JSON_STRING + "\n");
                 }
+                // ou  String text = new Scanner(new InputStream()).useDelimiter("\\A").next();
+                //para converter todo o stream em uma String
+
 
                 bufferedReader.close();
                 inputStream.close();

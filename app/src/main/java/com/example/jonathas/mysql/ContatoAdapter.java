@@ -69,6 +69,7 @@ public class ContatoAdapter extends ArrayAdapter {
         contatoHolder.tx_user_name.setText(contatos.getUser_name());
         contatoHolder.tx_user_pass.setText(contatos.getUser_pass());
 
+
         return row;
     }
 
